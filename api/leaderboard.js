@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   const response = await fetch(
-    `${url}/rest/v1/scores?select=*&order=wave.desc&limit=10`,
+    `${url}/rest/v1/scores?select=*&order=wave.desc&limit=3`,
     {
       headers: {
         apikey: key,
