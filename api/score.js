@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const body = req.body;
+  const body = req.body || {};
 
   const response = await fetch(`${url}/rest/v1/scores`, {
     method: "POST",
