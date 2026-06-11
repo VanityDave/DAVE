@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanityDave's Fanpage</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+    linear-gradient(135deg,#001b44,#2d005a,#5f0066);
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,.04) 0px,
+    rgba(255,255,255,.04) 2px,
+    transparent 2px,
+    transparent 25px);
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    width:90%;
+    max-width:500px;
+}
+
+h1{
+    color:#ffd84d;
+    font-size:3rem;
+    font-weight:900;
+    text-shadow:0 0 20px rgba(255,216,77,.5);
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:50px;
+}
+
+.button{
+    display:block;
+    width:100%;
+    padding:22px;
+    margin:20px 0;
+    border:none;
+    border-radius:20px;
+    font-size:2rem;
+    font-weight:900;
+    cursor:pointer;
+    text-decoration:none;
+    color:white;
+    transition:.2s;
+}
+
+.button:hover{
+    transform:scale(1.03);
+}
+
+.tower{
+    background:linear-gradient(#20d85f,#129c44);
+    border:4px solid #ffe36d;
+}
+
+.youtube{
+    background:linear-gradient(#ff3838,#c60000);
+    border:4px solid #ffe36d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>VanityDave's Fanpage</h1>
+<div class="subtitle">
+Official Community Hub
+</div>
+
+<a class="button tower" href="index.html">
+Tower Defense
+</a>
+
+<a class="button youtube" href="youtube.html">
+YouTube
+</a>
+
+</div>
+
+</body>
+</html>
