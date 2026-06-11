@@ -1,132 +1,29 @@
-from pathlib import Path
-
-youtube_html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YouTube Videos</title>
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 50% 18%, rgba(245,197,66,.34), transparent 28%),
-    linear-gradient(135deg,
-      rgba(255,255,255,.14) 0 12%,
-      transparent 12% 24%,
-      rgba(255,255,255,.08) 24% 36%,
-      transparent 36% 48%,
-      rgba(255,255,255,.10) 48% 60%,
-      transparent 60% 100%),
-    linear-gradient(160deg,#050505,#1a1a1a 45%,#060606);
-}
-
-body::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(120deg,
-      rgba(255,255,255,.18),
-      transparent 22%,
-      rgba(212,175,55,.18) 42%,
-      transparent 62%,
-      rgba(255,255,255,.14));
-  pointer-events:none;
-}
-
-.container{
-  position:relative;
-  z-index:1;
-  width:90%;
-  max-width:520px;
-}
-
-h1{
-  font-size:42px;
-  font-weight:1000;
-  color:#f5c542;
-  -webkit-text-stroke:2px #000;
-  text-shadow:0 5px 0 #000,0 0 22px #d4af37;
-  margin-bottom:10px;
-}
-
-.subtitle{
-  font-size:18px;
-  font-weight:800;
-  margin-bottom:34px;
-  color:#ffffff;
-}
-
-.btn{
-  display:block;
-  width:100%;
-  min-height:74px;
-  margin:18px 0;
-  padding:20px;
-  border:3px solid #ffffff;
-  border-radius:20px;
-  background:linear-gradient(#f7d56a,#b8860b);
-  color:#050505;
-  font-size:23px;
-  font-weight:1000;
-  text-decoration:none;
-  box-shadow:0 8px 0 #4a2f00,0 0 24px rgba(245,197,66,.7);
-}
-
-.btn:active{
-  transform:translateY(4px);
-  box-shadow:0 4px 0 #4a2f00;
-}
-
-.back{
-  margin-top:34px;
-  background:linear-gradient(#ffffff,#bfbfbf);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at 50% 20%,rgba(212,175,55,.35),transparent 30%),linear-gradient(160deg,#050505,#191919 45%,#060606);overflow:hidden}
+.container{position:relative;z-index:2;text-align:center;width:90%;max-width:550px}
+h1{color:#f5c542;font-size:3.2rem;font-weight:900;text-shadow:0 4px 0 #000,0 0 20px rgba(212,175,55,.6);margin-bottom:20px}
+.subtitle{color:white;font-size:1.5rem;font-weight:900;margin-bottom:35px}
+.button{display:block;width:100%;padding:22px;margin:18px 0;border-radius:20px;font-size:2rem;font-weight:900;text-decoration:none;color:#050505;background:linear-gradient(#f7d56a,#b8860b);border:3px solid white;box-shadow:0 8px 0 #4a2f00,0 0 20px rgba(245,197,66,.6)}
+.back{background:linear-gradient(#fff,#cfcfcf)}
 </style>
 </head>
-
 <body>
 <div class="container">
-  <h1>YouTube Videos</h1>
-  <div class="subtitle">VanityDave Playlists</div>
+<h1>YouTube Videos</h1>
+<div class="subtitle">VanityDave Playlists</div>
 
-  <a class="btn" target="_blank" rel="noopener noreferrer"
-     href="https://youtube.com/playlist?list=PLrW2Y-WIJx8_CnKA20yRNwApRSqvNE3hX&si=tDBmiMwmWPY4CYu3">
-    Skin Showcase
-  </a>
+<a class="button" href="https://youtube.com/playlist?list=PLrW2Y-WIJx8_CnKA20yRNwApRSqvNE3hX&si=tDBmiMwmWPY4CYu3">Skin Showcase</a>
+<a class="button" href="https://youtube.com/playlist?list=PLrW2Y-WIJx8877RceqvVhbfgqvHRpgXrX&si=_oM64jT6oeQcbq1m">Hunt Royale Music</a>
+<a class="button" href="https://youtube.com/playlist?list=PLrW2Y-WIJx88tAGfdqkk2wz_gzo4B4U5q&si=zpb1ybiYLvCAZcVf">Gear Guide</a>
+<a class="button back" href="index.html">Back</a>
 
-  <a class="btn" target="_blank" rel="noopener noreferrer"
-     href="https://youtube.com/playlist?list=PLrW2Y-WIJx8877RceqvVhbfgqvHRpgXrX&si=_oM64jT6oeQcbq1m">
-    Hunt Royale Music
-  </a>
-
-  <a class="btn" target="_blank" rel="noopener noreferrer"
-     href="https://youtube.com/playlist?list=PLrW2Y-WIJx88tAGfdqkk2wz_gzo4B4U5q&si=zpb1ybiYLvCAZcVf">
-    Gear Guide
-  </a>
-
-  <a class="btn back" href="start.html">
-    Back
-  </a>
 </div>
 </body>
 </html>
-"""
-
-out = Path("/mnt/data/youtube.html")
-out.write_text(youtube_html, encoding="utf-8")
-print(out)
