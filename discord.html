@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord Servers</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden;background:#031106}
+body::before{content:"";position:absolute;inset:-50%;background:repeating-linear-gradient(120deg,transparent 0px,transparent 80px,rgba(0,255,120,.18) 82px,rgba(0,255,120,.7) 84px,rgba(0,255,120,.18) 86px,transparent 88px,transparent 180px);animation:moveLines 12s linear infinite}
+body::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,255,120,.12),transparent 60%);pointer-events:none}
+@keyframes moveLines{0%{transform:translate(-120px,-120px)}100%{transform:translate(120px,120px)}}
+.container{position:relative;z-index:2;text-align:center;width:90%;max-width:550px}
+h1{color:#7dffb1;font-size:3.2rem;font-weight:900;text-shadow:0 0 10px #00ff78,0 0 25px #00ff78,0 0 50px #00ff78;margin-bottom:20px}
+.subtitle{color:white;font-size:1.5rem;font-weight:900;margin-bottom:35px}
+.button{display:block;width:100%;padding:22px;margin:18px 0;border-radius:20px;font-size:2rem;font-weight:900;text-decoration:none;color:#d8ffe8;background:linear-gradient(135deg,#03210f,#064d23,#03210f);border:3px solid #00ff78;box-shadow:0 0 10px #00ff78,0 0 20px #00ff78,inset 0 0 15px rgba(0,255,120,.3);animation:glowBorder 3s linear infinite}
+@keyframes glowBorder{0%{box-shadow:0 0 10px #00ff78,0 0 20px #00ff78,inset 0 0 15px rgba(0,255,120,.3)}50%{box-shadow:0 0 20px #00ff78,0 0 40px #00ff78,inset 0 0 25px rgba(0,255,120,.6)}100%{box-shadow:0 0 10px #00ff78,0 0 20px #00ff78,inset 0 0 15px rgba(0,255,120,.3)}}
+.button:hover{transform:scale(1.02)}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Discord Servers</h1>
+<div class="subtitle">VanityDave Community Links</div>
+
+<a class="button" href="https://discord.gg/mEYr6Tvss">Dark Avengers</a>
+<a class="button" href="https://discord.gg/americandream">American Dream</a>
+<a class="button" href="https://discord.gg/8EUCtqX9k">Freaks</a>
+<a class="button" href="https://discord.gg/darkseid">Darkseid</a>
+<a class="button" href="https://discord.gg/puntovanities">Punto Vanitys</a>
+<a class="button" href="https://discord.gg/TXtQ6j9Au">Dinoland</a>
+<a class="button" href="index.html">Back</a>
+
+</div>
+</body>
+</html>
