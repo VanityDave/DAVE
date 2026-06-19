@@ -24,7 +24,36 @@ body{
 radial-gradient(circle at 15% 25%, rgba(255,255,255,0.04) 0%, transparent 25%),
 radial-gradient(circle at 80% 60%, rgba(255,255,255,0.03) 0%, transparent 30%),
 radial-gradient(circle at 40% 80%, rgba(255,255,255,0.02) 0%, transparent 25%),
+body::after{
+    content:"";
+    position:absolute;
+    inset:-50%;
 
+    background:
+    repeating-linear-gradient(
+        115deg,
+        transparent 0px,
+        transparent 120px,
+        rgba(212,175,55,0.12) 122px,
+        rgba(212,175,55,0.20) 124px,
+        rgba(212,175,55,0.12) 126px,
+        transparent 128px,
+        transparent 250px
+    );
+
+    animation: goldFlow 25s linear infinite;
+
+    pointer-events:none;
+}
+
+@keyframes goldFlow{
+    from{
+        transform:translateX(-150px) translateY(-50px);
+    }
+    to{
+        transform:translateX(150px) translateY(50px);
+    }
+}
 repeating-linear-gradient(
     35deg,
     transparent 0px,
