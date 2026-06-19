@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VanityDave's Fanpage</title>
+<title>VanityDave's Homepage</title>
 
 <style>
 *{
@@ -18,35 +18,60 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:
-    radial-gradient(circle at 50% 20%, rgba(212,175,55,0.35), transparent 30%),
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,0.12) 0%,
-        rgba(255,255,255,0.04) 20%,
-        transparent 20%,
-        transparent 40%,
-        rgba(255,255,255,0.06) 40%,
-        rgba(255,255,255,0.02) 60%,
-        transparent 60%
-    ),
-    linear-gradient(160deg,#050505,#191919 45%,#060606);
     overflow:hidden;
+
+    background:
+    radial-gradient(circle at 50% 15%,
+        rgba(255,215,100,0.25) 0%,
+        transparent 35%
+    ),
+
+    linear-gradient(
+        115deg,
+        rgba(255,215,100,0.06) 0%,
+        transparent 20%,
+        rgba(255,255,255,0.03) 25%,
+        transparent 45%,
+        rgba(255,215,100,0.04) 50%,
+        transparent 70%
+    ),
+
+    repeating-linear-gradient(
+        135deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 2px,
+        transparent 2px,
+        transparent 140px
+    ),
+
+    linear-gradient(
+        145deg,
+        #050505,
+        #0f0f0f 20%,
+        #1a1a1a 40%,
+        #090909 60%,
+        #141414 80%,
+        #040404
+    );
 }
 
 body::before{
     content:"";
     position:absolute;
     inset:0;
+
     background:
     linear-gradient(
-        120deg,
-        rgba(255,255,255,.15),
-        transparent 25%,
-        rgba(212,175,55,.12) 45%,
-        transparent 65%,
-        rgba(255,255,255,.08)
+        90deg,
+        transparent 0%,
+        rgba(212,175,55,0.12) 15%,
+        transparent 30%,
+        rgba(212,175,55,0.08) 50%,
+        transparent 70%,
+        rgba(212,175,55,0.10) 85%,
+        transparent 100%
     );
+
     pointer-events:none;
 }
 
@@ -63,9 +88,10 @@ h1{
     font-size:3.2rem;
     font-weight:900;
     text-shadow:
-        0 4px 0 #000,
-        0 0 20px rgba(212,175,55,.6);
-    margin-bottom:40px;
+        0 0 10px rgba(255,215,100,0.7),
+        0 0 25px rgba(255,215,100,0.5),
+        0 4px 0 #000;
+    margin-bottom:30px;
 }
 
 .button{
@@ -105,14 +131,29 @@ h1{
 
 <div class="container">
 
-<h1>VanityDave's Fanpage</h1>
+<h1>VanityDave's Homepage</h1>
 
-<a class="button" href="game.html">
-Tower Defense
-</a>
+<p style="
+color:white;
+font-size:1.15rem;
+font-weight:600;
+line-height:1.6;
+margin-bottom:35px;
+text-shadow:0 0 8px rgba(0,0,0,.8);
+">
+Created to support the Hunt Royale community with guides, showcases, and helpful content.
+
+<br><br>
+
+We are all one community. Respectful gameplay, fair competition, and friendly communication should always come first.
+</p>
 
 <a class="button" href="youtube.html">
 YouTube Videos
+</a>
+
+<a class="button" href="discord.html">
+Discord Server
 </a>
 
 </div>
